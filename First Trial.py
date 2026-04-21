@@ -295,8 +295,10 @@ import pandas as pd
 
 # Basic read
 # df = pd.read_csv('C:\Different Folder\Code\python\Scrapping the Data\Book1.csv')
-de = pd.read_excel("Book1.xlsx")
-print(de)
+def func_to_print(file_path):
+    de = pd.read_excel(file_path)
+    return de
+print(func_to_print("Book1.xlsx"))
 # print(df)
 
 
