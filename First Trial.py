@@ -286,8 +286,18 @@ import numpy as np
 #
 # plt.show()
 
+import pandas as pd
+# import openpyxl as op
+# # Read the first sheet
+# df = pd.read_excel(C:\Different Folder\Code\python\Scrapping the Data\Book1.xlsx)
+#
+# print(df.head())
 
-
+# Basic read
+# df = pd.read_csv('C:\Different Folder\Code\python\Scrapping the Data\Book1.csv')
+de = pd.read_excel("Book1.xlsx")
+print(de)
+# print(df)
 
 
 
