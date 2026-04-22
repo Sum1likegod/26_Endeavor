@@ -233,8 +233,8 @@ import string
 #     print(f"Ticket ID {t['id']} is categorized as: {t['category']}")
 
 
-import pandas as pd
-import numpy as np
+# import pandas as pd
+# import numpy as np
 
 # data = {
 #     "ticket_id": [101, 102, 103, 104, 105],
@@ -254,15 +254,15 @@ import numpy as np
 
 
 
-# Imagine we added a 'category' column to our 'df'
+## Imagine we added a 'category' column to our 'df'
 # df['category'] = ['Technical', 'Billing', 'General', 'Technical']
 
-# What will this line produce?
+## What will this line produce?
 # print(df['issue'].describe())
 
 
 # logins = [8.0, 9.5, np.nan, 8.5, 10.0, np.nan]
-#
+
 # df = pd.DataFrame(logins)
 #
 # print(df.isnull().sum())
@@ -271,9 +271,9 @@ import numpy as np
 # df = df.replace(np.nan, df.mean())
 #
 # print(df)
-
+#
 # import matplotlib.pyplot as plt
-
+#
 # days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 # logins = [8.0, 9.5, 8.7, 8.5, 10.0, 9.0]
 #
@@ -286,7 +286,7 @@ import numpy as np
 #
 # plt.show()
 
-import pandas as pd
+# import pandas as pd
 # import openpyxl as op
 # # Read the first sheet
 # df = pd.read_excel(C:\Different Folder\Code\python\Scrapping the Data\Book1.xlsx)
@@ -295,10 +295,10 @@ import pandas as pd
 
 # Basic read
 # df = pd.read_csv('C:\Different Folder\Code\python\Scrapping the Data\Book1.csv')
-def func_to_print(file_path):
-    de = pd.read_excel(file_path)
-    return de
-print(func_to_print("Book1.xlsx"))
+# def func_to_print(file_path):
+#     de = pd.read_excel(file_path)
+#     return de
+# print(func_to_print("Book1.xlsx"))
 # print(df)
 
 
