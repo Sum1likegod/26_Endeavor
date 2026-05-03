@@ -14,3 +14,13 @@ If the version you want isn't in the list, you must add it manually.
 4. **Locate Executable:** Browse to the location of your Python executable and click **OK**.
     * *Windows:* `python.exe`
     * *Linux/macOS:* `/usr/bin/python3`
+
+
+## 📂 File Handling & Portability
+
+To ensure the script runs on any computer (Windows, Mac, or Linux) without manual path configuration, this script includes **Relative Paths** via the `pathlib` library.
+
+### The Path Logic:
+Instead of a "hardcoded" path like `C:\Users\Name\Documents...`, the code uses:
+```python
+file_path = Path(__file__).parent / "your_example_file.xlsx"
