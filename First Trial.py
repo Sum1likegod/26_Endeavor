@@ -303,7 +303,7 @@ import string
 
 
 
-############# Pseudo Code for the Data Optimizer #############
+############# Pseudo Code for Ticket Organizer #############
 # import pandas as pd
 # import matplotlib.pyplot as plt
 #
@@ -314,7 +314,7 @@ import string
 #     'Department': ['Tech', 'Tech', 'Billing', 'Tech'],
 #     'Issue': ['LOGIN ERROR', 'payment failed', 'InVoIcE missing', 'Slow Website']
 # }
-#
+
 # df = pd.DataFrame(raw_data)
 #
 # # 2. THE CLEANING PHASE
