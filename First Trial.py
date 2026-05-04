@@ -289,7 +289,7 @@ import string
 # import pandas as pd
 # import openpyxl as op
 # # Read the first sheet
-# df = pd.read_excel(C:\Different Folder\Code\python\Scrapping the Data\Book1.xlsx)
+# df = pd.read_excel(C:\Different Folder\Code\python\Scrapping the Data\Excel Test File.xlsx)
 #
 # print(df.head())
 
@@ -298,7 +298,7 @@ import string
 # def func_to_print(file_path):
 #     de = pd.read_excel(file_path)
 #     return de
-# print(func_to_print("Book1.xlsx"))
+# print(func_to_print("Excel Test File.xlsx"))
 # print(df)
 
 
@@ -349,13 +349,23 @@ import string
 # base_path = Path(__file__).parent
 #
 # ## This joins the folder path with your filename correctly for any OS
-# file_path = base_path / "Book1.xlsx"
+# file_path = base_path / "Excel Test File.xlsx"
 #
-# df = pd.read_excel("Book1.xlsx")
+# df = pd.read_excel("Excel Test File.xlsx")
 # print(df)
 
 
+import pandas as pd
 
+df = pd.read_excel('raw_data/Excel Test File.xlsx')
+
+for col in df.select_dtypes(include=['object', 'string']).columns:
+    df[col] = df[col].str.strip().str.lower()
+
+for col in df.select_dtypes(include=['number']).columns:
+    df[col] = df[col].fillna(df[col].mean())
+
+df.to_excel('processed_data/Excel_Test_File_Cleaned.xlsx', index=False)
 
 
 
