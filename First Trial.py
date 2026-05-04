@@ -355,17 +355,17 @@ import string
 # print(df)
 
 
-import pandas as pd
-
-df = pd.read_excel('raw_data/Excel Test File.xlsx')
-
-for col in df.select_dtypes(include=['object', 'string']).columns:
-    df[col] = df[col].str.strip().str.lower()
-
-for col in df.select_dtypes(include=['number']).columns:
-    df[col] = df[col].fillna(df[col].mean())
-
-df.to_excel('processed_data/Excel_Test_File_Cleaned.xlsx', index=False)
+# import pandas as pd
+#
+# df = pd.read_excel('raw_data/Excel Test File.xlsx')
+#
+# for col in df.select_dtypes(include=['object', 'string']).columns:
+#     df[col] = df[col].str.strip().str.lower()
+#
+# for col in df.select_dtypes(include=['number']).columns:
+#     df[col] = df[col].fillna(df[col].mean())
+#
+# df.to_excel('processed_data/Excel_Test_File_Cleaned.xlsx', index=False)
 
 
 

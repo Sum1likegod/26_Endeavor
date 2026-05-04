@@ -22,5 +22,22 @@ To ensure the script runs on any computer (Windows, Mac, or Linux) without manua
 
 ### The Path Logic:
 Instead of a "hardcoded" path like `C:\Users\Name\Documents...`, the code uses:
-```python
+```python 
 file_path = Path(__file__).parent / "your_example_file.xlsx"
+```
+
+## 💡 Technical Deep Dive: String Manipulation in Pandas
+
+### The `.str` Accessor & Method Chaining
+In this project, text cleaning is performed using vectorized string operations. A common pattern used is:
+```python
+df[col] = df[col].str.strip().str.lower()
+```
+
+### Why call .str twice?
+**The Accessor:** Pandas Series are not strings; they are containers. The `.str` attribute is an "accessor" that grants access to string-specific methods.
+
+**The Return Type:** Each method (like `.strip()`) returns a new Series. Because the return is a Series and not a raw string, we must re-invoke the `.str` accessor to perform the next operation (like `.lower()`).
+
+**Efficiency:** While it looks repetitive, this is "vectorized," meaning Pandas performs the operation on the entire column at once in C-speed, rather than looping through rows in slow Python.
+
