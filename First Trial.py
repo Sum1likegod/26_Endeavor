@@ -17,7 +17,7 @@
 # if value is None:
 #     print("The value is None.")
 # import time
-import string
+# import string
 
 # example_for_lower = "hell is this 12"
 # print(example_for_lower.islower())
